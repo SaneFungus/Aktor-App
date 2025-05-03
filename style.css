@@ -1,0 +1,117 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+.controls {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.controls > div {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.controls > div:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+button, input[type="file"] {
+    padding: 8px 12px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #e7e7e7;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+button:active {
+    background-color: #ccc;
+}
+
+#script-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#script-content {
+    border: 1px solid #ccc;
+    padding: 15px;
+    min-height: 200px;
+    white-space: pre-wrap; /* Zachowuje białe znaki i łamanie linii */
+    overflow-wrap: break-word; /* Łamie długie słowa */
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+/* --- Style formatowania --- */
+.dialogue {
+    color: blue;
+}
+
+.monologue {
+    color: green;
+    font-weight: bold;
+}
+
+.stage-direction {
+    color: gray;
+    font-style: italic;
+}
+
+.my-line {
+    background-color: #ffffcc; /* Lekko żółte tło dla moich kwestii */
+    border: 1px dashed #f0ad4e;
+    padding: 2px 0; /* Dodaje trochę oddechu */
+    display: inline; /* Zapobiega traktowaniu jako bloku */
+}
+
+/* --- Style trybu nauki --- */
+.learning-mode .my-line span.original-text {
+    display: none; /* Ukrywa oryginalny tekst w trybie nauki */
+}
+
+.learning-mode .my-line input.line-input {
+    border: 1px solid #ccc;
+    padding: 2px;
+    margin: 0 2px;
+    font: inherit; /* Dziedziczy czcionkę */
+    width: 80px; /* Domyślna szerokość, można dostosować */
+    background-color: #fff;
+}
+
+.learning-mode .my-line input.line-input.correct {
+    background-color: #dff0d8; /* Zielone tło dla poprawnych */
+    border-color: #d6e9c6;
+}
+
+.learning-mode .my-line input.line-input.incorrect {
+    background-color: #f2dede; /* Czerwone tło dla niepoprawnych */
+    border-color: #ebccd1;
+}
+
+.emoji-picker button {
+    font-size: 1.2em;
+    padding: 2px 6px;
+    background: none;
+    border: none;
+}
