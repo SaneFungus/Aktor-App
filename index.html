@@ -3,51 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aplikacja dla Aktora - Nauka Tekstu</title>
+    <title>Fiszki dla Aktora</title>
     <link rel="stylesheet" href="style.css">
-</head>
+    </head>
 <body>
-    <h1>Aplikacja dla Aktora - Nauka Tekstu</h1>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Fiszki dla Aktora</h1>
+            <div class="file-loader">
+                <label for="fileInput" class="load-button">Wczytaj Scenariusz (.txt)</label>
+                <input type="file" id="fileInput" accept=".txt" style="display: none;">
+                 </div>
+        </header>
 
-    <div class="controls">
-        <div class="file-controls">
-            <label for="fileInput">Wczytaj plik tekstowy (.txt): </label>
-            <input type="file" id="fileInput" accept=".txt">
-            <button id="saveButton">Zapisz stan (HTML)</button>
-            <button id="loadHtmlButton">Wczytaj stan (HTML)</button>
-            <input type="file" id="htmlFileInput" accept=".html" style="display: none;">
-        </div>
-
-        <div class="editor-controls">
-            <h3>Narzędzia edycji:</h3>
-            <button class="format-button" data-style="dialogue">Dialog</button>
-            <button class="format-button" data-style="monologue">Monolog</button>
-            <button class="format-button" data-style="stage-direction">Didaskalia</button>
-            <button class="format-button" data-style="my-line">Moja kwestia</button>
-            <button id="clearFormatting">Wyczyść formatowanie</button>
-            <div class="emoji-picker">
-                <button class="emoji-button">😀</button>
-                <button class="emoji-button">😂</button>
-                <button class="emoji-button">🤔</button>
-                <button class="emoji-button">😭</button>
-                <button class="emoji-button">😠</button>
+        <main id="flashcard-area" class="flashcard-area">
+            <div id="flashcard-container" class="flashcard-container">
+                <div id="card-progress" class="card-progress"></div>
+                <div id="card-content" class="card-content">
+                    <p>Wczytaj plik .txt ze scenariuszem, aby rozpocząć.</p>
+                    <p>Każdy akapit (oddzielony pustą linią) stanie się osobną fiszką.</p>
                 </div>
-        </div>
+                 </div>
+        </main>
 
-        <div class="learning-controls">
-            <h3>Tryb nauki:</h3>
-            <button id="startLearning">Rozpocznij naukę (ukryj moje kwestie)</button>
-            <button id="checkAnswers" style="display: none;">Sprawdź odpowiedzi</button>
-            <button id="exitLearning" style="display: none;">Zakończ naukę</button>
-            <p id="score" style="display: none;"></p>
-        </div>
-    </div>
-
-    <div id="script-container">
-        <h2>Tekst Scenariusza:</h2>
-        <div id="script-content" contenteditable="false">
-            <p>Wczytaj plik tekstowy lub zapisany stan HTML, aby rozpocząć.</p>
-        </div>
+        <footer class="navigation">
+            <button id="prev-card" class="nav-button" disabled>&laquo; Poprzednia</button>
+            <button id="next-card" class="nav-button" disabled>Następna &raquo;</button>
+        </footer>
     </div>
 
     <script src="script.js"></script>
